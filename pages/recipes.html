@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Resep — NutriFamily</title>
+    <meta name="description" content="Rekomendasi resep masakan keluarga." />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/enhance.css" />
+    <link rel="icon" href="../assets/img/favicon.png" />
+  </head>
+  <body class="nf-site" data-page="recipes">
+    <header class="nf-header wide">
+      <div class="nf-header-inner">
+        <a class="nf-brand" href="../index.html"
+          ><img
+            src="../assets/img/logo.jpg"
+            alt="Logo NutriFamily"
+            class="nf-logo"
+          />NutriFamily</a
+        >
+        <nav class="nf-nav" aria-label="Navigasi utama">
+          <a href="../index.html" class="">Home</a
+          ><a href="../index.html#about">About</a
+          ><a href="../index.html#contact">Contact</a>
+        </nav>
+        <div class="nf-header-end"></div>
+      </div>
+    </header>
+    <div class="nf-app">
+      <aside class="nf-sidebar">
+        <div class="nf-sidebar-label">MENU UTAMA</div>
+        <a href="dashboard.html" class="">Dashboard</a
+        ><a href="stock.html" class="">Bahan & Stok</a
+        ><a href="recipes.html" class="active">Menu Resep</a
+        ><a href="reports.html" class="">Laporan Persediaan</a>
+      </aside>
+      <main class="nf-main">
+        <div class="nf-title-row">
+          <div>
+            <h1>Rekomendasi & Menu Resep Masakan</h1>
+            <p>
+              Klik tombol Detail pada resep untuk membuka tampilan pop-out bahan
+              & langkah memasak.
+            </p>
+          </div>
+        </div>
+        <div class="nf-recipes">
+          <article class="nf-recipe">
+            <div class="nf-recipe-cover"></div>
+            <div class="nf-recipe-body">
+              <h2>Sop Ayam Bening Gurih</h2>
+              <small>30 menit · 4 porsi · 4 bahan</small>
+              <p>Seluruh bahan tersedia di dapur Anda.</p>
+              <button
+                class="btn"
+                type="button"
+                data-action="recipe-detail"
+                data-id="1"
+              >
+                Detail
+              </button>
+            </div>
+          </article>
+          <article class="nf-recipe">
+            <div class="nf-recipe-cover"></div>
+            <div class="nf-recipe-body">
+              <h2>Tumis Wortel Kuah Susu</h2>
+              <small>20 menit · 2 porsi · 3 bahan</small>
+              <button
+                class="btn"
+                type="button"
+                data-action="recipe-detail"
+                data-id="2"
+              >
+                Detail
+              </button>
+            </div>
+          </article>
+          <article class="nf-recipe">
+            <div class="nf-recipe-cover warning"></div>
+            <div class="nf-recipe-body">
+              <h2>Semur Ayam Kuah Rempah</h2>
+              <small>35 menit · 4 porsi · 4 bahan</small>
+              <button
+                class="btn"
+                type="button"
+                data-action="recipe-detail"
+                data-id="3"
+              >
+                Detail
+              </button>
+            </div>
+          </article>
+          <article class="nf-recipe">
+            <div class="nf-recipe-cover"></div>
+            <div class="nf-recipe-body">
+              <h2>Nasi Goreng Bawang Spesial</h2>
+              <small>15 menit · 2 porsi · 4 bahan</small>
+              <button
+                class="btn"
+                type="button"
+                data-action="recipe-detail"
+                data-id="4"
+              >
+                Detail
+              </button>
+            </div>
+          </article>
+          <article class="nf-recipe">
+            <div class="nf-recipe-cover warning"></div>
+            <div class="nf-recipe-body">
+              <h2>Sop Wortel Susu Creamy</h2>
+              <small>25 menit · 3 porsi · 3 bahan</small>
+              
+              <button
+                class="btn"
+                type="button"
+                data-action="recipe-detail"
+                data-id="5"
+              >
+                Detail
+              </button>
+            </div>
+          </article>
+          <article class="nf-recipe">
+            <div class="nf-recipe-cover"></div>
+            <div class="nf-recipe-body">
+              <h2>Ayam Goreng Bumbu Bawang</h2>
+              <small>40 menit · 4 porsi · 3 bahan</small>
+              <p>Seluruh bahan tersedia di dapur Anda.</p>
+              <button
+                class="btn"
+                type="button"
+                data-action="recipe-detail"
+                data-id="6"
+              >
+                Detail
+              </button>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+    <div id="nf-modal-host"></div>
+    <div id="nf-toast-host" aria-live="polite"></div>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/recipe.js"></script>
+    <script src="../assets/js/enhance.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>

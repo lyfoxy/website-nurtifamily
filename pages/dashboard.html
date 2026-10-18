@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard — NutriFamily</title>
+    <meta name="description" content="Ringkasan stok dan kedaluwarsa dapur." />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/enhance.css" />
+    <link rel="icon" href="../assets/img/favicon.png" />
+  </head>
+  <body class="nf-site" data-page="dashboard">
+    <header class="nf-header wide">
+      <div class="nf-header-inner">
+        <a class="nf-brand" href="../index.html"><img src="../assets/img/logo.jpg" alt="Logo NutriFamily" class="nf-logo">NutriFamily</a>
+        <nav class="nf-nav" aria-label="Navigasi utama">
+          <a href="../index.html" class="">Home</a><a href="../index.html#about">About</a
+          ><a href="../index.html#contact">Contact</a>
+        </nav>
+        <div class="nf-header-end">
+          <div class="nf-user"><b id="user-name">Pengguna</b><small id="user-email">-</small></div>
+          <button class="btn btn-white" type="button" data-action="logout">Keluar</button>
+        </div>
+      </div>
+    </header>
+    <div class="nf-app">
+      <aside class="nf-sidebar">
+        <div class="nf-sidebar-label">MENU UTAMA</div>
+        <a href="dashboard.html" class="active">Dashboard</a
+        ><a href="stock.html" class="">Bahan & Stok</a><a href="recipes.html" class="">Menu Resep</a
+        ><a href="reports.html" class="">Laporan Persediaan</a>
+      </aside>
+      <main class="nf-main">
+        <div class="nf-title-row">
+          <div>
+            <h1>Ringkasan Persediaan Dapur</h1>
+            <p>Pantau kondisi stok bahan makanan dan masa kedaluwarsa di rumah Anda.</p>
+          </div>
+          <a class="btn" href="add-ingredient.html">Tambah Bahan Baru</a>
+        </div>
+        <div class="nf-stats">
+          <article class="nf-stat">
+            <h3>Total Jenis Bahan</h3>
+            <strong>5</strong><small>Tercatat di penyimpanan</small>
+          </article>
+          <article class="nf-stat warning">
+            <h3>Stok Menipis</h3>
+            <strong>2</strong><small>Perlu segera ditambah</small>
+          </article>
+          <article class="nf-stat warning">
+            <h3>Mendekati Kedaluwarsa</h3>
+            <strong>1</strong><small>Dalam 1 hingga 5 hari</small>
+          </article>
+          <article class="nf-stat danger">
+            <h3>Habis / Lewat Tanggal</h3>
+            <strong>1</strong><small>Periksa kondisi fisik bahan</small>
+          </article>
+        </div>
+        <section class="nf-panel">
+          <div class="nf-panel-heading">
+            <h3 class="mb-0">Pengelompokan Pemantauan Kedaluwarsa</h3>
+            <p>Klik kelompok untuk menyaring daftar bahan</p>
+          </div>
+          <div class="nf-groups">
+            <a href="stock.html?group=safe" class="nf-group safe"
+              ><small>Belum Mendekati (Aman)</small><strong>2 Bahan</strong></a
+            ><a href="stock.html?group=near" class="nf-group warning"
+              ><small>Mendekati Kedaluwarsa</small><strong>1 Bahan</strong></a
+            ><a href="stock.html?group=expired" class="nf-group danger"
+              ><small>Telah Melewati Tanggal</small><strong>1 Bahan</strong></a
+            ><a href="stock.html?group=undated" class="nf-group"
+              ><small>Tanpa Tanggal</small><strong>1 Bahan</strong></a
+            >
+          </div>
+        </section>
+        <section class="nf-panel nf-warning-panel">
+          <h2>Daftar Peringatan Persediaan & Kedaluwarsa</h2>
+          <p>
+            Periksa kondisi fisik bahan dan petunjuk kemasan sebelum memutuskan kelayakan konsumsi.
+          </p>
+          <div class="nf-table-wrap">
+            <table class="nf-table">
+              <thead>
+                <tr>
+                  <th>Nama Bahan</th>
+                  <th>Sisa Stok</th>
+                  <th>Tanggal Kedaluwarsa</th>
+                  <th>Status Perhatian</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Daging Ayam</strong></td>
+                  <td><strong>1.5 kilogram</strong></td>
+                  <td class="">3 hari lagi</td>
+                  <td><span class="nf-badge warning">Mendekati Kedaluwarsa</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Susu UHT</strong></td>
+                  <td><strong>2 liter</strong></td>
+                  <td class="nf-text-danger">Lewat 1 hari</td>
+                  <td><span class="nf-badge danger">Lewat Kedaluwarsa</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div id="nf-modal-host"></div>
+    <div id="nf-toast-host" aria-live="polite"></div>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/stock.js"></script>
+    <script src="../assets/js/enhance.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>

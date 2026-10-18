@@ -1,0 +1,89 @@
+/* ===== Revisi v3 ===== */
+.nf-header { position: sticky; top: 0; z-index: 1100; box-shadow: 0 2px 12px rgb(0 0 0 / 6%); }
+.nf-brand { display: inline-flex; align-items: center; gap: 10px; }
+.nf-logo { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
+.nf-sidebar { position: sticky; top: 72px; align-self: start; height: calc(100vh - 72px); overflow-y: auto; z-index: 1100; }
+body.nf-no-nav .nf-header { display: none; }
+.nf-back-home { display: inline-flex; gap: 6px; align-items: center; margin-top: 18px; color: var(--nf-green, #0b4a3e); font-weight: 600; text-decoration: none; }
+.nf-back-home:hover { text-decoration: underline; }
+
+/* Toast kanan atas, warna mencolok */
+#nf-toast-host { position: fixed; top: 88px; right: 20px; z-index: 2000; }
+.nf-toast, #nf-toast-host .nf-toast {
+  position: static !important; inset: auto !important; transform: none !important;
+  background: #16a34a !important; color: #fff !important; font-weight: 600;
+  padding: 14px 20px; border-radius: 12px; box-shadow: 0 10px 30px rgb(22 163 74 / 40%);
+  animation: nfSlide .3s ease; max-width: 340px;
+}
+@keyframes nfSlide { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: none; } }
+
+/* Pop-up: blur hanya di area konten, navbar & sidebar tetap jelas */
+.nf-overlay { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); background: rgb(255 255 255 / 25%) !important; }
+
+/* Foto resep: tidak terpotong, tetap mengisi */
+.nf-recipe-cover, .nf-dish-placeholder { display: flex; align-items: center; justify-content: center; }
+.nf-recipe-cover:has(img), .nf-dish-placeholder:has(img) { padding: 0 !important; background: none !important; border: 0; }
+.nf-recipe-photo, .nf-dish-photo { object-fit: cover !important; width: 100%; height: 100%; display: block; }
+.nf-photo-preview { max-height: 220px; width: 100%; object-fit: contain; background: #f1f5ef; border-radius: 12px; margin-top: 8px; }
+
+.nf-vitamin { margin-top: 16px; padding: 14px 16px; border-radius: 12px; background: #fff7e0; border: 1px solid #f6c445; }
+.nf-vitamin h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; color: #8a5a00; }
+.nf-vitamin p { margin: 0; }
+
+.btn-reset { background: #fff3cd; color: #8a5a00; border: 1px solid #f6c445; flex: 0 0 auto; }
+.btn-reset:hover { background: #f6c445; color: #000; }
+.nf-filters { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.nf-filters > .form-control, .nf-filters > .form-select { flex: 1 1 160px; width: auto; }
+
+.nf-master-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+.nf-master-head h2 { margin: 0; }
+.nf-master-add { display: flex; gap: 8px; }
+.nf-admin-single { grid-template-columns: 1fr !important; display: block !important; }
+
+/* Home: tiap frame warna berbeda */
+.nf-hero { background: linear-gradient(rgb(255 255 255 / 55%), rgb(255 255 255 / 70%)), url("../img/bg-leaves.jpg") center/cover; }
+.nf-about { background: #eef6ee; }
+.nf-section { padding: 72px 20px; }
+.nf-wrap { max-width: 1160px; margin: auto; }
+.nf-sec-title { font-weight: 700; text-align: center; }
+.nf-sec-sub { text-align: center; color: #5b6b63; margin-bottom: 28px; }
+.nf-sec-reviews { background: #fff8e6; }
+.nf-sec-contact { background: #e6f1f6; }
+.nf-review { background: #fff; border-radius: 16px; padding: 20px; height: 100%; box-shadow: 0 6px 20px rgb(0 0 0 / 6%); }
+.nf-review-stars { color: #f5a623; font-size: 18px; } .nf-review-stars span { color: #ddd; }
+.nf-review p { margin: 8px 0 12px; } .nf-review small { color: #6b7a72; }
+.nf-review-form { max-width: 560px; margin: 32px auto 0; background: #fff; padding: 24px; border-radius: 16px; display: grid; gap: 12px; box-shadow: 0 6px 20px rgb(0 0 0 / 6%); }
+.nf-review-form h3 { font-size: 18px; font-weight: 700; margin: 0; }
+.nf-stars button { border: 0; background: none; font-size: 24px; color: #ddd; padding: 0 2px; }
+.nf-stars button.on { color: #f5a623; }
+.nf-contact-item { display: flex; gap: 14px; align-items: center; background: #fff; padding: 14px 16px; border-radius: 14px; margin-bottom: 12px; }
+.nf-contact-item i { font-size: 22px; color: #0b4a3e; }
+.nf-contact-item small { display: block; color: #6b7a72; }
+.nf-contact-item a, .nf-contact-item span { font-weight: 600; color: #1d2b25; text-decoration: none; }
+
+.nf-footer { background: #0d0d0d; color: #cfcfcf; padding: 56px 20px 20px; }
+.nf-footer h4 { color: #fff; font-size: 16px; font-weight: 700; margin-bottom: 14px; }
+.nf-footer a { display: block; color: #cfcfcf; text-decoration: none; margin-bottom: 8px; }
+.nf-footer a:hover { color: #f6c445; }
+.nf-brand-footer { color: #fff !important; font-weight: 700; font-size: 20px; display: inline-flex !important; }
+.nf-social { display: flex; gap: 10px; margin-top: 10px; }
+.nf-social a { width: 38px; height: 38px; border-radius: 50%; background: #222; display: inline-flex !important; align-items: center; justify-content: center; }
+.nf-copy { border-top: 1px solid #2a2a2a; margin-top: 32px; padding-top: 16px; text-align: center; font-size: 14px; color: #8a8a8a; }
+@media (max-width: 768px) { .nf-sidebar { position: static; } .nf-master-add { width: 100%; } }
+
+/* Kartu resep: tombol Detail sejajar */
+.nf-recipe { display: flex; flex-direction: column; }
+.nf-recipe-body { flex: 1; display: flex; flex-direction: column; }
+.nf-recipe-body .btn { margin-top: auto; align-self: flex-start; }
+.nf-recipe-body small { margin-bottom: 14px; display: block; }
+.nf-vit-tag { font-style: normal; font-size: 12px; font-weight: 700; background: #dcfce7; color: #166534; padding: 2px 8px; border-radius: 999px; margin-left: 4px; }
+.nf-hint { display: block; color: #64748b; margin-bottom: 8px; }
+
+/* Notifikasi kedaluwarsa */
+.nf-expiry-alert { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border-radius: 12px; margin-bottom: 10px; max-width: 360px; font-weight: 600; box-shadow: 0 10px 30px rgb(0 0 0 / 20%); animation: nfSlide .3s ease; }
+.nf-expiry-alert i { font-size: 22px; }
+.nf-expiry-alert b { display: block; }
+.nf-expiry-alert span { font-weight: 500; font-size: 14px; }
+.nf-expiry-alert button { margin-left: auto; background: none; border: 0; font-size: 22px; line-height: 1; color: inherit; }
+.nf-expiry-alert.near { background: #ffe500; color: #3b2f00; }
+.nf-expiry-alert.expired { background: #dc2626; color: #fff; }

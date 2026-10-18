@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hapus Bahan — NutriFamily</title>
+    <meta name="description" content="Konfirmasi penghapusan bahan makanan." />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/enhance.css" />
+    <link rel="icon" href="../assets/img/favicon.png" />
+  </head>
+  <body class="nf-site" data-page="delete-ingredient">
+    <header class="nf-header wide">
+      <div class="nf-header-inner">
+        <a class="nf-brand" href="../index.html"><img src="../assets/img/logo.jpg" alt="Logo NutriFamily" class="nf-logo">NutriFamily</a>
+        <nav class="nf-nav" aria-label="Navigasi utama">
+          <a href="../index.html" class="">Home</a><a href="../index.html#about">About</a
+          ><a href="../index.html#contact">Contact</a>
+        </nav>
+        <div class="nf-header-end"></div>
+      </div>
+    </header>
+    <div class="nf-app">
+      <aside class="nf-sidebar">
+        <div class="nf-sidebar-label">MENU UTAMA</div>
+        <a href="dashboard.html" class="">Dashboard</a
+        ><a href="stock.html" class="active">Bahan & Stok</a
+        ><a href="recipes.html" class="">Menu Resep</a
+        ><a href="reports.html" class="">Laporan Persediaan</a>
+      </aside>
+      <main class="nf-main">
+        <div class="nf-title-row">
+          <div>
+            <h1>Manajemen Bahan & Stok Bahan Makanan</h1>
+            <p>
+              Kelola stok tersedia, lokasi penyimpanan, serta pantau status kedaluwarsa dengan
+              jelas.
+            </p>
+          </div>
+          <a class="btn" href="add-ingredient.html">Tambah Bahan</a>
+        </div>
+        <section class="nf-panel nf-filters" aria-label="Filter bahan">
+          <input
+            class="form-control"
+            id="search-stock"
+            placeholder="Cari nama bahan makanan..."
+            aria-label="Cari nama bahan makanan"
+          /><select class="form-select" id="filter-category" aria-label="Kategori">
+            <option value="">Semua Kategori</option>
+            <option>Protein &amp; Daging</option>
+            <option>Bumbu &amp; Rempah</option>
+            <option>Susu &amp; Olahan</option>
+            <option>Sayuran Segar</option></select
+          ><select class="form-select" id="filter-status" aria-label="Status stok">
+            <option value="">Semua Status Stok</option>
+            <option value="low">Stok Menipis</option>
+            <option value="available">Tersedia</option></select
+          ><select class="form-select" id="filter-expiry" aria-label="Kedaluwarsa">
+            <option value="">Semua Kedaluwarsa</option>
+            <option value="safe">Belum Mendekati</option>
+            <option value="near">Mendekati Kedaluwarsa</option>
+            <option value="expired">Lewat Kedaluwarsa</option>
+            <option value="undated">Tanpa Tanggal</option>
+          </select>
+        </section>
+        <section class="nf-panel nf-stock-panel">
+          <h2>Daftar Bahan & Persediaan (<span id="stock-count">5</span> Bahan)</h2>
+          <div class="nf-table-wrap">
+            <table class="nf-table">
+              <thead>
+                <tr>
+                  <th>Nama & Kategori Bahan</th>
+                  <th>Jumlah Stok</th>
+                  <th>Kedaluwarsa & Lokasi</th>
+                  <th>Status Persediaan</th>
+                  <th>Tindakan</th>
+                </tr>
+              </thead>
+              <tbody id="stock-rows">
+                <tr class="row-warning">
+                  <td>
+                    <strong>Daging Ayam</strong
+                    ><small class="nf-category">Protein &amp; Daging</small>
+                  </td>
+                  <td><strong>1.5 kilogram</strong></td>
+                  <td><strong>2026-10-15</strong><small>Freezer</small></td>
+                  <td><span class="nf-badge warning">Mendekati Exp</span></td>
+                  <td>
+                    <div class="nf-actions">
+                      <button
+                        class="btn btn-icon btn-light"
+                        type="button"
+                        data-action="edit-ingredient"
+                        data-id="1"
+                        aria-label="Edit Daging Ayam"
+                        title="Edit Daging Ayam"
+                      >
+                        <i class="bi bi-pencil-square" aria-hidden="true"></i></button
+                      ><button
+                        class="btn btn-icon btn-delete"
+                        type="button"
+                        data-action="delete-ingredient"
+                        data-id="1"
+                        aria-label="Hapus Daging Ayam"
+                        title="Hapus Daging Ayam"
+                      >
+                        <i class="bi bi-trash" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="row-warning">
+                  <td>
+                    <strong>Bawang Merah</strong
+                    ><small class="nf-category">Bumbu &amp; Rempah</small>
+                  </td>
+                  <td><strong>0.2 kilogram</strong></td>
+                  <td><strong>2026-10-22</strong><small>Rak Bumbu</small></td>
+                  <td><span class="nf-badge warning">Stok Menipis</span></td>
+                  <td>
+                    <div class="nf-actions">
+                      <button
+                        class="btn btn-icon btn-light"
+                        type="button"
+                        data-action="edit-ingredient"
+                        data-id="2"
+                        aria-label="Edit Bawang Merah"
+                        title="Edit Bawang Merah"
+                      >
+                        <i class="bi bi-pencil-square" aria-hidden="true"></i></button
+                      ><button
+                        class="btn btn-icon btn-delete"
+                        type="button"
+                        data-action="delete-ingredient"
+                        data-id="2"
+                        aria-label="Hapus Bawang Merah"
+                        title="Hapus Bawang Merah"
+                      >
+                        <i class="bi bi-trash" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="row-danger">
+                  <td>
+                    <strong>Susu UHT</strong><small class="nf-category">Susu &amp; Olahan</small>
+                  </td>
+                  <td><strong>2 liter</strong></td>
+                  <td><strong>2026-10-11</strong><small>Kulkas Utama (Chiller)</small></td>
+                  <td><span class="nf-badge danger">Lewat Kedaluwarsa</span></td>
+                  <td>
+                    <div class="nf-actions">
+                      <button
+                        class="btn btn-icon btn-light"
+                        type="button"
+                        data-action="edit-ingredient"
+                        data-id="3"
+                        aria-label="Edit Susu UHT"
+                        title="Edit Susu UHT"
+                      >
+                        <i class="bi bi-pencil-square" aria-hidden="true"></i></button
+                      ><button
+                        class="btn btn-icon btn-delete"
+                        type="button"
+                        data-action="delete-ingredient"
+                        data-id="3"
+                        aria-label="Hapus Susu UHT"
+                        title="Hapus Susu UHT"
+                      >
+                        <i class="bi bi-trash" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="row-safe">
+                  <td><strong>Wortel</strong><small class="nf-category">Sayuran Segar</small></td>
+                  <td><strong>0.8 kilogram</strong></td>
+                  <td><strong>2026-10-21</strong><small>Kulkas Utama (Chiller)</small></td>
+                  <td><span class="nf-badge">Tersedia</span></td>
+                  <td>
+                    <div class="nf-actions">
+                      <button
+                        class="btn btn-icon btn-light"
+                        type="button"
+                        data-action="edit-ingredient"
+                        data-id="4"
+                        aria-label="Edit Wortel"
+                        title="Edit Wortel"
+                      >
+                        <i class="bi bi-pencil-square" aria-hidden="true"></i></button
+                      ><button
+                        class="btn btn-icon btn-delete"
+                        type="button"
+                        data-action="delete-ingredient"
+                        data-id="4"
+                        aria-label="Hapus Wortel"
+                        title="Hapus Wortel"
+                      >
+                        <i class="bi bi-trash" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="row-safe">
+                  <td>
+                    <strong>Bawang Putih</strong
+                    ><small class="nf-category">Bumbu &amp; Rempah</small>
+                  </td>
+                  <td><strong>0.1 kilogram</strong></td>
+                  <td><strong>Tanpa tanggal</strong><small>Rak Bumbu</small></td>
+                  <td><span class="nf-badge">Tersedia</span></td>
+                  <td>
+                    <div class="nf-actions">
+                      <button
+                        class="btn btn-icon btn-light"
+                        type="button"
+                        data-action="edit-ingredient"
+                        data-id="5"
+                        aria-label="Edit Bawang Putih"
+                        title="Edit Bawang Putih"
+                      >
+                        <i class="bi bi-pencil-square" aria-hidden="true"></i></button
+                      ><button
+                        class="btn btn-icon btn-delete"
+                        type="button"
+                        data-action="delete-ingredient"
+                        data-id="5"
+                        aria-label="Hapus Bawang Putih"
+                        title="Hapus Bawang Putih"
+                      >
+                        <i class="bi bi-trash" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div id="nf-modal-host">
+      <div class="nf-overlay" data-overlay="delete">
+        <section class="nf-dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title">
+          <div class="nf-dialog-icon"><i class="bi bi-trash" aria-hidden="true"></i></div>
+          <h2 id="dialog-title">Apakah Anda Yakin Ingin Menghapus Bahan Ini?</h2>
+          <strong>“Daging Ayam” (1.5 kilogram)</strong>
+          <p>
+            Bahan makanan ini beserta seluruh riwayat aktivitas akan<br />dihapus secara permanen
+            dari daftar persediaan dapur Anda.
+          </p>
+          <div class="nf-dialog-actions">
+            <button class="btn btn-light" type="button" data-action="close-modal">Tidak</button
+            ><button
+              class="btn btn-danger"
+              type="button"
+              data-action="confirm-delete"
+              data-kind="ingredient"
+              data-id="1"
+            >
+              Hapus
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div id="nf-toast-host" aria-live="polite"></div>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/stock.js"></script>
+    <script src="../assets/js/enhance.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>

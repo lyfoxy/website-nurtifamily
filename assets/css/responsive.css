@@ -1,0 +1,388 @@
+@media (min-width: 1600px) {
+  .nf-main {
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+  }
+  .nf-hero {
+    min-height: 448px;
+  }
+}
+@media (max-width: 1199px) {
+  .nf-header-inner {
+    margin: 0 32px;
+  }
+  .nf-header.wide .nf-header-inner {
+    margin: 0 28px;
+  }
+  .nf-main {
+    padding: 30px;
+  }
+  .nf-app {
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+  .nf-stats {
+    gap: 14px;
+  }
+  .nf-stat {
+    padding: 16px;
+  }
+  .nf-groups {
+    gap: 12px;
+  }
+  .nf-group {
+    padding: 12px;
+  }
+  .nf-about {
+    margin: 40px 40px 60px;
+  }
+  .nf-admin {
+    margin: 32px;
+  }
+  .nf-form-page {
+    margin: 32px auto;
+  }
+  .nf-detail {
+    margin-left: 200px;
+  }
+  .nf-recipes {
+    gap: 16px;
+  }
+  .nf-recipe-body {
+    padding: 16px;
+  }
+  .nf-hero h1 {
+    font-size: 38px;
+  }
+}
+@media (max-width: 991px) {
+  .nf-app {
+    grid-template-columns: 180px minmax(0, 1fr);
+  }
+  .nf-sidebar {
+    padding: 24px 12px;
+  }
+  .nf-sidebar a {
+    padding: 10px;
+  }
+  .nf-main {
+    padding: 28px 24px;
+  }
+  .nf-stats,
+  .nf-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .nf-title-row {
+    grid-template-columns: 1fr;
+  }
+  .nf-title-row .btn {
+    justify-self: start;
+  }
+  .nf-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .nf-header-end .nf-user {
+    display: none;
+  }
+  .nf-header-inner {
+    gap: 20px;
+  }
+  .nf-nav {
+    gap: 24px;
+  }
+  .nf-admin-grid {
+    grid-template-columns: 1.25fr 1fr;
+    gap: 20px;
+  }
+  .nf-admin-form {
+    padding: 24px !important;
+  }
+  .nf-detail {
+    margin-left: 150px;
+  }
+  .nf-detail-intro {
+    grid-template-columns: 140px minmax(0, 1fr);
+  }
+  .nf-detail-columns {
+    gap: 24px;
+  }
+  .nf-recipes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .nf-panel-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+@media (max-width: 767px) {
+  .nf-header {
+    height: auto;
+    min-height: 72px;
+  }
+  .nf-header-inner,
+  .nf-header.wide .nf-header-inner {
+    margin: 0 20px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    padding: 14px 0;
+  }
+  .nf-brand {
+    font-size: 21px;
+  }
+  .nf-nav {
+    grid-row: 2;
+    grid-column: 1/-1;
+    justify-content: center;
+    gap: 34px;
+  }
+  .nf-header-end {
+    grid-column: 2;
+    grid-row: 1;
+    gap: 8px;
+  }
+  .nf-header-end .btn {
+    padding: 8px 14px;
+    font-size: 11px;
+  }
+  .nf-app {
+    display: block;
+    min-height: calc(100vh - 110px);
+  }
+  .nf-sidebar {
+    border-right: 0;
+    border-bottom: 1px solid var(--nf-border);
+    padding: 12px 16px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+  }
+  .nf-sidebar-label {
+    display: none;
+  }
+  .nf-sidebar a {
+    white-space: nowrap;
+    font-size: 12px;
+    margin: 0;
+    padding: 9px 13px;
+  }
+  .nf-main {
+    padding: 26px 20px 40px;
+  }
+  h1 {
+    font-size: 23px;
+  }
+  .nf-hero {
+    padding: 65px 20px 44px;
+    min-height: 440px;
+  }
+  .nf-hero h1 {
+    font-size: 30px;
+    line-height: 1.4;
+    margin-bottom: 22px;
+  }
+  .nf-hero p {
+    font-size: 14px;
+  }
+  .nf-hero-actions {
+    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 26px;
+  }
+  .nf-hero-actions .btn {
+    width: min(100%, 320px);
+    min-height: 46px;
+  }
+  .nf-about {
+    margin: 28px 20px 40px;
+    padding: 26px 24px;
+  }
+  .nf-about-heading h2 {
+    font-size: 23px;
+  }
+  .nf-about .row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 18px;
+    margin-top: 12px;
+  }
+  .nf-feature {
+    padding: 22px;
+    min-height: 170px;
+  }
+  .nf-feature h3 {
+    font-size: 16px;
+  }
+  .nf-auth {
+    margin: 30px auto;
+  }
+  .nf-auth.register {
+    margin-top: 30px;
+  }
+  .nf-auth-body {
+    padding: 28px 24px;
+  }
+  .nf-auth-body h1 {
+    font-size: 22px;
+  }
+  .nf-auth-card {
+    min-height: 500px;
+  }
+  .nf-form-page {
+    margin: 28px 20px;
+  }
+  .nf-form-page h1 {
+    font-size: 24px;
+  }
+  .nf-form-page .nf-panel {
+    padding: 26px 24px;
+  }
+  .nf-form-footer .btn {
+    min-width: 0;
+    flex: 1;
+  }
+  .nf-panel {
+    padding: 20px;
+  }
+  .nf-admin {
+    margin: 26px 20px;
+  }
+  .nf-admin-grid {
+    grid-template-columns: 1fr;
+  }
+  .nf-admin-form {
+    padding: 24px !important;
+  }
+  .nf-admin-submit .btn {
+    min-width: 0;
+    width: 100%;
+  }
+  .nf-admin-list {
+    min-height: 250px;
+  }
+  .nf-editor-section {
+    min-height: 130px;
+  }
+  .nf-overlay {
+    inset: 0;
+    padding: 16px;
+    background: oklch(0.245 0.07 138 / 0.1);
+  }
+  .nf-dialog {
+    padding: 24px;
+  }
+  .nf-dialog h2 {
+    font-size: 17px;
+  }
+  .nf-dialog-actions {
+    gap: 12px;
+  }
+  .nf-dialog-actions .btn {
+    min-width: 0;
+    flex: 1;
+  }
+  .nf-detail {
+    margin: 0;
+    height: calc(100dvh - 32px);
+    border-radius: 14px;
+  }
+  .nf-detail-header {
+    padding: 14px 18px;
+    border-radius: 10px;
+  }
+  .nf-detail-header h2 {
+    font-size: 13px;
+  }
+  .nf-detail-body {
+    padding: 20px;
+  }
+  .nf-detail-intro {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .nf-dish-placeholder {
+    height: 120px;
+  }
+  .nf-detail-intro h1 {
+    font-size: 23px;
+  }
+  .nf-detail-columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .nf-toast {
+    font-size: 12px;
+  }
+  .nf-title-row {
+    gap: 16px;
+  }
+  .nf-warning-panel {
+    min-height: 300px;
+  }
+}
+@media (max-width: 420px) {
+  .nf-hero h1 {
+    font-size: 27px;
+  }
+  .nf-stats,
+  .nf-groups {
+    gap: 12px;
+  }
+  .nf-stat {
+    padding: 15px 13px;
+  }
+  .nf-stat h3 {
+    font-size: 11px;
+  }
+  .nf-stat small {
+    font-size: 10px;
+  }
+  .nf-stat strong {
+    font-size: 30px;
+  }
+  .nf-group {
+    padding: 12px;
+  }
+  .nf-group small {
+    font-size: 11px;
+  }
+  .nf-group strong {
+    font-size: 22px;
+  }
+  .nf-recipes {
+    grid-template-columns: 1fr;
+  }
+  .nf-filters {
+    gap: 12px;
+    padding: 16px !important;
+  }
+  .nf-filters input {
+    grid-column: 1/-1;
+  }
+  .nf-filters .form-select {
+    font-size: 11px;
+    padding-left: 10px;
+  }
+  .nf-editor-heading h3 {
+    font-size: 12px;
+  }
+  .nf-editor-heading .btn {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+  .nf-admin-item {
+    padding: 14px;
+  }
+  .nf-ingredient {
+    grid-template-columns: 90px minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

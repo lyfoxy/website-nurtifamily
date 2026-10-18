@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Bahan — NutriFamily</title>
+    <meta name="description" content="Tambahkan bahan makanan baru." />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/enhance.css" />
+    <link rel="icon" href="../assets/img/favicon.png" />
+  </head>
+  <body class="nf-site" data-page="add-ingredient">
+    <header class="nf-header">
+      <div class="nf-header-inner">
+        <a class="nf-brand" href="../index.html"><img src="../assets/img/logo.jpg" alt="Logo NutriFamily" class="nf-logo">NutriFamily</a>
+        <div></div>
+        <div class="nf-header-end"><a class="btn" href="stock.html">Kembali ke Stok</a></div>
+      </div>
+    </header>
+    <main class="nf-form-page">
+      <h1>Tambah Bahan Makanan Baru</h1>
+      <p>
+        Lengkapi formulir di bawah ini untuk mencatat bahan makanan baru ke dalam inventaris dapur
+        rumah.
+      </p>
+      <section class="nf-panel">
+        <form data-form="ingredient" data-id="">
+          <div class="nf-field">
+            <label class="form-label" for="name">Nama Bahan Makanan</label
+            ><input
+              class="form-control"
+              id="name"
+              name="name"
+              type="text"
+              value=""
+              placeholder="Contoh: Daging Ayam, Telur Ayam, Brokoli Segar"
+              required
+            />
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="nf-field">
+                <label class="form-label" for="category">Kategori Bahan</label
+                ><select class="form-select" id="category" name="category">
+                  <option>Protein &amp; Daging</option>
+                  <option>Sayuran Segar</option>
+                  <option>Bumbu &amp; Rempah</option>
+                  <option>Susu &amp; Olahan</option>
+                  <option>Buah-buahan</option>
+                  <option>Bahan Pokok</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="nf-field">
+                <label class="form-label" for="location">Lokasi Penyimpanan</label
+                ><select class="form-select" id="location" name="location">
+                  <option>Freezer</option>
+                  <option>Kulkas Utama (Chiller)</option>
+                  <option>Rak Bumbu</option>
+                  <option>Lemari Dapur</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="nf-field">
+                <label class="form-label" for="quantity">Jumlah Stok Awal</label
+                ><input
+                  class="form-control"
+                  id="quantity"
+                  name="quantity"
+                  type="number"
+                  value="1"
+                  placeholder=""
+                  required
+                  min="0"
+                  step="0.01"
+                />
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="nf-field">
+                <label class="form-label" for="unit">Satuan Pengukuran</label
+                ><select class="form-select" id="unit" name="unit">
+                  <option>kilogram</option>
+                  <option>liter</option>
+                  <option>gram</option>
+                  <option>buah</option>
+                  <option>butir</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="nf-field">
+                <label class="form-label" for="minimum">Batas Minimum</label
+                ><input
+                  class="form-control"
+                  id="minimum"
+                  name="minimum"
+                  type="number"
+                  value="0.3"
+                  placeholder=""
+                  required
+                  min="0"
+                  step="0.01"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="nf-field">
+                <label class="form-label" for="purchased">Tanggal Pembelian</label
+                ><input
+                  class="form-control"
+                  id="purchased"
+                  name="purchased"
+                  type="date"
+                  value="2026-10-12"
+                  placeholder=""
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="nf-field">
+                <label class="form-label" for="expiry">Tanggal Kedaluwarsa</label
+                ><input
+                  class="form-control"
+                  id="expiry"
+                  name="expiry"
+                  type="date"
+                  value="2026-10-22"
+                  placeholder=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="nf-field">
+            <label class="form-label" for="notes">Catatan / Keterangan Pembelian</label
+            ><input
+              class="form-control"
+              id="notes"
+              name="notes"
+              type="text"
+              value=""
+              placeholder="Contoh: Pembelian di supermarket awal pekan"
+            />
+          </div>
+          <div class="nf-form-footer">
+            <a class="btn btn-light" href="stock.html">Batal</a
+            ><button class="btn" type="submit">Simpan Bahan</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <div id="nf-modal-host"></div>
+    <div id="nf-toast-host" aria-live="polite"></div>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/stock.js"></script>
+    <script src="../assets/js/enhance.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>
